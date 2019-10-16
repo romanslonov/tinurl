@@ -4,9 +4,23 @@
   "description": "Make your brand better by creating recognizable short links",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "keywords": ["url", "shortener", "node", "javascript", "service"],
+  "keywords": [
+    "url",
+    "shortener",
+    "node",
+    "javascript",
+    "service"
+  ],
   "author": "Roman Slonov",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
 }

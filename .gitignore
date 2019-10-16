@@ -21,3 +21,6 @@ npm-debug.log*
 .settings/
 .vscode/
 .idea
+
+# Environment variables
+.env
