@@ -1,6 +1,6 @@
 const path = require('path');
-const controller = require('../../controllers/urlController');
+const controller = require('../../controllers/url');
 
 module.exports = (app) => {
-    app.post('/api/v1/shorten/', controller);
+    app.post('/api/v1/url/', controller);
 };
