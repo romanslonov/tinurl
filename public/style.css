@@ -1,0 +1,114 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+button, input {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+a { text-decoration: none; }
+
+input::-moz-placeholder { color: lightslategray; }
+input::-webkit-input-placeholder { color: lightslategray; }
+input:-ms-input-placeholder { color: lightslategray; }
+input::-ms-input-placeholder { color: lightslategray; }
+input::placeholder { color: lightslategray; }
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.header {
+    text-align: center;
+    padding: 64px 16px 32px;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 42px;
+}
+
+.header__text {
+    color: lightslategray;
+    font-size: 20px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.generate-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: hsla(210, 14%, 53%, 0.15);
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.generate-form__input {
+    font-family: inherit;
+    font-size: inherit;
+    border: 2px solid hsla(210, 14%, 53%, 0.53);
+    border-radius: 4px;
+    height: 60px;
+    width: 100%;
+    padding: 0 16px;
+}
+
+.generate-form__input:focus {
+    outline: none;
+    border-color: #673ab7;
+}
+
+.generate-form__button {
+    color: white;
+    display: block;
+    height: 60px;
+    white-space: nowrap;
+    border: none;
+    background-color:#673ab7;
+    padding: 0 16px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.result {
+    margin-top: 16px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.nav__logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.nav__list {
+    list-style: none;
+}
+
+.nav__link {
+    color: black;
+}

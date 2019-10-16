@@ -1,13 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>TINURL – Make your brand better by creating recognizable short links</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap" rel="stylesheet">
 </head>
-<body>
 
+<body>
+<div class="container">
+    <nav class="nav">
+        <div class="nav__logo">tinurl</div>
+
+        <ul class="nav__list">
+        </ul>
+    </nav>
+    <header class="header">
+        <h1 class="header__title">Create Better Links</h1>
+        <p class="header__text">Make your brand better by creating recognizable short links.</p>
+    </header>
+    <div class="wrapper">
+        <form id="generateForm" class="generate-form">
+            <input autocomplete="off" name="url" type="text" placeholder="Enter your URL" required class="generate-form__input">
+            <button class="generate-form__button" type="submit">Shorten URL</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
+
 </html>
