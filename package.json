@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "frontend-dev": "parcel public/index.html -d public/dist",
+    "frontend-build": "parcel build public/index.html -d public/dist"
   },
   "keywords": [
     "url",
@@ -22,6 +24,7 @@
     "express": "^4.17.1",
     "helmet": "^3.21.1",
     "mysql2": "^1.7.0",
+    "parcel-bundler": "^1.12.4",
     "shortid": "^2.2.15",
     "valid-url": "^1.0.9"
   },

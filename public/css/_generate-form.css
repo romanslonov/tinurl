@@ -1,0 +1,37 @@
+.generate-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: hsla(210, 14%, 53%, 0.15);
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.generate-form__input {
+    font-family: inherit;
+    font-size: inherit;
+    border: 2px solid hsla(210, 14%, 53%, 0.53);
+    border-radius: 4px;
+    height: 60px;
+    width: 100%;
+    padding: 0 16px;
+}
+
+.generate-form__input:focus {
+    outline: none;
+    border-color: #673ab7;
+}
+
+.generate-form__button {
+    color: white;
+    display: block;
+    height: 60px;
+    white-space: nowrap;
+    border: none;
+    background-color:#673ab7;
+    padding: 0 16px;
+    border-radius: 4px;
+    margin-left: 8px;
+    cursor: pointer;
+}

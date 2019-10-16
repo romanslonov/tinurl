@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(helmet());
 app.use(express.json({ extended: false }));
-app.use(express.static('public'));
+app.use(express.static('public/dist'));
 
 fs.readdirSync(`${__dirname}/routes/v1/`).forEach((file) => {
     require(`./routes/v1/${file}`)(app);
