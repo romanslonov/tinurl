@@ -17,8 +17,10 @@
   "author": "Roman Slonov",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "helmet": "^3.21.1",
     "mysql2": "^1.7.0",
     "shortid": "^2.2.15",
     "valid-url": "^1.0.9"

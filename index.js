@@ -2,8 +2,12 @@ require('dotenv').config();
 
 const fs = require('fs');
 const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
 const app = express();
 
+app.use(cors());
+app.use(helmet());
 app.use(express.json({ extended: false }));
 app.use(express.static('public'));
 
