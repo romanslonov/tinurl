@@ -4,8 +4,9 @@ const db = require('../db');
 
 module.exports = async (req, res) => {
     const { url } = req.body;
-    const code = shortid.generate();
     const { HOSTNAME, PORT } = process.env;
+    const code = shortid.generate();
+    const isProduction = process.NODE_ENV === 'production';
 
     if (validurl.isUri(url)) {
         const connection = await db.getConnection();
@@ -17,7 +18,6 @@ module.exports = async (req, res) => {
             if (foundURL) {
                 return res.status(200).json(foundURL);
             } else {
-                const isProduction = process.NODE_ENV === 'production';
                 const shortUrl = isProduction
                     ? `http://${HOSTNAME}/${code}`
                     : `http://${HOSTNAME}:${PORT}/${code}`;
