@@ -15,6 +15,6 @@ fs.readdirSync(`${__dirname}/routes/v1/`).forEach((file) => {
     require(`./routes/v1/${file}`)(app);
 });
 
-const { PORT, HOSTNAME } = process.env;
+const { PORT, HOSTNAME, NODE_ENV } = process.env;
 
-app.listen(PORT, HOSTNAME, () => console.log(`Server running http://${HOSTNAME}:${PORT}`));
+app.listen(PORT, HOSTNAME, () => console.log(`Server running http://${HOSTNAME}:${PORT} in ${NODE_ENV} mode.`));
