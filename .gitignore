@@ -24,3 +24,7 @@ npm-debug.log*
 
 # Environment variables
 .env
+
+# Build
+.cache
+dist
