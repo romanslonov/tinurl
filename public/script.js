@@ -3,13 +3,13 @@ const form = document.getElementById('generateForm');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const value = form.querySelector('input[name="url"]');
+    const input = form.querySelector('input[name="url"]');
 
-    if (value.url) {
-        fetch('http://localhost:9000/api/v1/shorten', {
+    if (input.value) {
+        fetch('http://localhost:9000/api/v1/url/', {
             headers: { 'Content-Type': 'application/json' },
             method: 'POST',
-            body: JSON.stringify({ url: value.url })
+            body: JSON.stringify({ url: input.value })
         })
             .then(response => response.json())
             .then((response) => {
