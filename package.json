@@ -1,0 +1,12 @@
+{
+  "name": "tinurl",
+  "version": "1.0.0",
+  "description": "Make your brand better by creating recognizable short links",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["url", "shortener", "node", "javascript", "service"],
+  "author": "Roman Slonov",
+  "license": "MIT"
+}
