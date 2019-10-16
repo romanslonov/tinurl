@@ -4,9 +4,9 @@ const db = require('../db');
 
 module.exports = async (req, res) => {
     const { url } = req.body;
-    const { HOSTNAME, PORT } = process.env;
+    const { HOSTNAME, PORT, NODE_ENV } = process.env;
     const code = shortid.generate();
-    const isProduction = process.NODE_ENV === 'production';
+    const isProduction = NODE_ENV === 'production';
 
     if (validurl.isUri(url)) {
         const connection = await db.getConnection();
@@ -21,6 +21,7 @@ module.exports = async (req, res) => {
                 const shortUrl = isProduction
                     ? `http://${HOSTNAME}/${code}`
                     : `http://${HOSTNAME}:${PORT}/${code}`;
+
                 const [response2] = await connection.query('INSERT INTO `urls` (longUrl, shortUrl, code) VALUES (?, ?, ?)', [url, shortUrl, code]);
                 const [response3] = await connection.query('SELECT * FROM `urls` WHERE `id` = ?', [response2.insertId]);
                 const createdURL = response3[0];
