@@ -2,11 +2,11 @@ import { HOSTNAME } from './constants';
 
 const main = () => {
     const form = document.getElementById('generateForm');
+    const input  = form.querySelector('input[name="url"]');
+    const link =  document.getElementById('result');
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-
-        const input  = form.querySelector('input[name="url"]');
 
         if (input.value) {
             fetch(`${HOSTNAME}/api/v1/url/`, {
@@ -16,12 +16,20 @@ const main = () => {
             })
                 .then(response => response.json())
                 .then((response) => {
-                    document.getElementById('result').innerText = response.shortUrl;
+                    link.innerText = response.shortUrl;
+                    link.href = response.shortUrl;
                 })
                 .catch(() => {});
         }
 
         return false;
+    });
+
+    input.addEventListener('input', (e) => {
+        if (!e.target.value) {
+            link.innerText = '';
+            link.href = '#';
+        }
     });
 };
 

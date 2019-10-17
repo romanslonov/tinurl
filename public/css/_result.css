@@ -1,3 +1,5 @@
 .result {
     margin-top: 16px;
+    color: var(--primary);
+    text-decoration: underline;
 }
