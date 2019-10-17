@@ -1,17 +1,24 @@
 .generate-form {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
     max-width: 600px;
-    background-color: hsla(210, 14%, 53%, 0.15);
+    background-color: var(--light-gray);
     border-radius: 4px;
     padding: 16px;
+}
+
+@media (min-width: 768px) {
+    .generate-form {
+        flex-direction: row;
+    }
 }
 
 .generate-form__input {
     font-family: inherit;
     font-size: inherit;
-    border: 2px solid hsla(210, 14%, 53%, 0.53);
+    border: 2px solid var(--border-color);
     border-radius: 4px;
     height: 60px;
     width: 100%;
@@ -29,9 +36,16 @@
     height: 60px;
     white-space: nowrap;
     border: none;
-    background-color:#673ab7;
+    background-color: var(--primary);
     padding: 0 16px;
     border-radius: 4px;
-    margin-left: 8px;
     cursor: pointer;
+    margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+    .generate-form__button {
+        margin-top: 0;
+        margin-left: 8px;
+    }
 }

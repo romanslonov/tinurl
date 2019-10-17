@@ -1,6 +1,6 @@
 .header {
     text-align: center;
-    padding: 64px 16px 32px;
+    padding: 64px 0 32px;
 }
 
 .header__title {
@@ -9,6 +9,6 @@
 }
 
 .header__text {
-    color: lightslategray;
+    color: var(--text-secondary);
     font-size: 20px;
 }

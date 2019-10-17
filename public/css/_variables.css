@@ -1,0 +1,11 @@
+:root {
+    --violet: hsl(262, 52%, 47%);
+    --light-gray: hsla(210, 14%, 53%, 0.15);
+
+    --primary: var(--violet);
+
+    --bodt-font-family: 'Rubik', sans-serif;
+    --body-text-color: hsla(210, 14%, 20%, 1);
+    --text-secondary: hsla(210, 14%, 47%, 1);
+    --border-color: hsla(210, 14%, 53%, 0.53);
+}
