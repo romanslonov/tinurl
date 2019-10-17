@@ -19,7 +19,7 @@ module.exports = async (req, res) => {
                 return res.status(200).json(foundURL);
             } else {
                 const shortUrl = isProduction
-                    ? `http://${HOSTNAME}/${code}`
+                    ? `https://${HOSTNAME}/${code}`
                     : `http://${HOSTNAME}:${PORT}/${code}`;
 
                 const [response2] = await connection.query('INSERT INTO `urls` (longUrl, shortUrl, code) VALUES (?, ?, ?)', [url, shortUrl, code]);
