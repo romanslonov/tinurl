@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "frontend-dev": "parcel public/index.html -d dist",
-    "frontend-build": "parcel build public/index.html -d dist"
+    "frontend-dev": "parcel public/index.html -d public/dist",
+    "frontend-build": "parcel build public/index.html -d public/dist"
   },
   "keywords": [
     "url",
