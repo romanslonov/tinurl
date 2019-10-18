@@ -1,0 +1,5 @@
+.code-example pre {
+    border-radius: 4px;
+    background-color: var(--body-text-color);
+    padding: 32px;
+}

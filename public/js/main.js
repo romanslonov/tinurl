@@ -16,8 +16,8 @@ const main = () => {
             })
                 .then(response => response.json())
                 .then((response) => {
-                    link.innerText = response.shortUrl;
-                    link.href = response.shortUrl;
+                    link.innerText = response.url.shortUrl;
+                    link.href = response.url.shortUrl;
                 })
                 .catch(() => {});
         }

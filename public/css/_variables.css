@@ -1,6 +1,7 @@
 :root {
     --violet: hsl(262, 52%, 47%);
-    --light-gray: hsla(210, 14%, 53%, 0.15);
+    --light-bg-gray: hsla(210, 14%, 53%, 0.15);
+    --dark-bg-gray: hsla(210, 14%, 20%, 1);
 
     --primary: var(--violet);
 

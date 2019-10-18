@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
             const foundURL = response1[0];
 
             if (foundURL) {
-                return res.status(200).json(foundURL);
+                return res.status(200).json({ url: foundURL });
             } else {
                 const shortUrl = isProduction
                     ? `https://${HOSTNAME}/${code}`
@@ -26,7 +26,7 @@ module.exports = async (req, res) => {
                 const [response3] = await connection.query('SELECT * FROM `urls` WHERE `id` = ?', [response2.insertId]);
                 const createdURL = response3[0];
 
-                return res.status(200).json(createdURL);
+                return res.status(200).json({ url: createdURL });
             }
         } catch (error) {
             console.log(error);
